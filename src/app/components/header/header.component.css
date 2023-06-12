@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEDA15;
+    padding: 0.5em;
+}
+
+.container__img {
+    width: 150px;
+    margin-left: 1em;
+}
+
+.container__form {
+    display: flex;
+    width: 20%;
+    position: relative;
+}
+
+.container__form fa-icon {
+    position: absolute;
+    top: 0.8em;
+    left: 0.8em;
+}
+
+.container__input {
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    padding: 0.7em;
+    border: none;
+    border-radius: 10px;
+} 
+
+.container__icons {
+    display: flex;
+}
+
+.container__icon {
+    font-size: 1.6rem;
+    color: #F93606;
+    padding: 0.4em;
+    margin-right: 0.6em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+fa-icon:hover {
+    background-color: #F7F7F8;
+}
