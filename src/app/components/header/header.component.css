@@ -49,3 +49,38 @@
 fa-icon:hover {
     background-color: #F7F7F8;
 }
+
+@media (max-width: 910px) {
+    .container__img {
+        width: 130px;
+        margin-left: 0.4em;
+    }
+
+    .container__icon {
+        font-size: 1.3rem;
+        padding: 0.2em;
+        margin-right: 0.5em;
+    }
+
+    .container__input {
+        font-size: 0.8rem;
+        min-width: 150px;
+        padding: 0.5em;
+    }
+    
+    .container__form fa-icon {
+        top: 0.3em;
+        left: 0.5em;
+    }    
+}
+
+@media (max-width: 560px) {
+    .container__input {
+        margin-left: -2em;
+    }
+
+    .container__form fa-icon {
+        top: 0.3em;
+        left: -1em;
+    }  
+}
