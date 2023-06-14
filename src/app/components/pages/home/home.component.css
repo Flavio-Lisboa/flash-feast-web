@@ -60,7 +60,7 @@ h1 {
 
 .card span:nth-child(3){
     overflow: hidden;
-    height: 4.3em;
+    height: 1.4em;
     line-height: 1.4rem;
 }
 
@@ -119,7 +119,7 @@ h1 {
     }
 
     .card span:nth-child(3){
-        height: 3.4em;
+        height: 1.4em;
         line-height: 1.1rem;
     }
 

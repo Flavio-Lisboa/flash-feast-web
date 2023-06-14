@@ -1,74 +1,18 @@
 <div class="container">
     <h1>List of the tastiest meals in Brazil!</h1>
 
-    <div class="company-menu">
+    <div class="company-menu" *ngFor="let company of homeContent">
         <div class="company-menu__info">
-            <img src="assets/temp.webp" alt="">
-            <span>Burger King</span>
+            <img src="{{company.companyLogo}}" alt="">
+            <span>{{company.companyName | titlecase}}</span>
         </div>
         <div class="cards">
-            <div class="card">
-                <img src="assets/test3.webp" alt="">
-                <h2>Chicken</h2>
-                <span>A vida é um eterno fluxo de momentos, cada um com sua própria singularidade. Somos passageiros nessa jornada, navegando pelas águas incertas do tempo. Cada dia traz consigo a promessa de novas experiências e oportunidades de crescimento. É importante abraçar cada momento com gratidão e sabedoria, aprendendo com os desafios e celebrando as conquistas. O tempo não espera por ninguém, então devemos viver plenamente, valorizando as relações e buscando a realização de nossos sonhos. Que possamos viver cada dia com intensidade, lembrando que a felicidade está nas pequenas coisas e que somos os criadores de nosso próprio destino.</span>
-                <span>Qtd: 10</span>
-                <span>R$ 15,00</span>
-                <button>Buy</button>
-            </div>
-            <div class="card">
-                <img src="assets/Pastel.jpg" alt="">
-                <h2>Chicken</h2>
-                <span>A vida é um eterno fluxo de momentos</span>
-                <span>Qtd: 10</span>
-                <span>R$ 15,00</span>
-                <button>Buy</button>
-            </div>
-            <div class="card">
-                <img src="assets/Pastel.jpg" alt="">
-                <h2>Chicken</h2>
-                <span>A vida é um eterno fluxo de momentos</span>
-                <span>Qtd: 10</span>
-                <span>R$ 15,00</span>
-                <button>Buy</button>
-            </div>
-            <div class="card">
-                <img src="assets/Pastel.jpg" alt="">
-                <h2>Chicken</h2>
-                <span>A vida é um eterno fluxo de momentos</span>
-                <span>Qtd: 10</span>
-                <span>R$ 15,00</span>
-                <button>Buy</button>
-            </div>
-            <div class="card">
-                <img src="assets/Pastel.jpg" alt="">
-                <h2>Chicken</h2>
-                <span>A vida é um eterno fluxo de momentos</span>
-                <span>Qtd: 10</span>
-                <span>R$ 15,00</span>
-                <button>Buy</button>
-            </div>
-            <div class="card">
-                <img src="assets/Pastel.jpg" alt="">
-                <h2>Chicken</h2>
-                <span>A vida é um eterno fluxo de momentos</span>
-                <span>Qtd: 10</span>
-                <span>R$ 15,00</span>
-                <button>Buy</button>
-            </div>
-            <div class="card">
-                <img src="assets/Pastel.jpg" alt="">
-                <h2>Chicken</h2>
-                <span>A vida é um eterno fluxo de momentos</span>
-                <span>Qtd: 10</span>
-                <span>R$ 15,00</span>
-                <button>Buy</button>
-            </div>
-            <div class="card">
-                <img src="assets/Pastel.jpg" alt="">
-                <h2>Chicken</h2>
-                <span>A vida é um eterno fluxo de momentos</span>
-                <span>Qtd: 10</span>
-                <span>R$ 15,00</span>
+            <div class="card" *ngFor="let card of company.menus">
+                <img src="{{card.image}}" alt="">
+                <h2>{{card.name}}</h2>
+                <span>{{card.description}}</span>
+                <span>Qtd: {{card.availableQuantity}}</span>
+                <span>R$ {{card.price}}</span>
                 <button>Buy</button>
             </div>
         </div>  
