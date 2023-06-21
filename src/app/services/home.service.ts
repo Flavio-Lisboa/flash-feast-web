@@ -9,10 +9,11 @@ import { Observable } from 'rxjs';
 })
 export class HomeService {
   private baseApiUrl = environment.baseApiUrl;
+  private apiUrl = `${this.baseApiUrl}menus`
 
   constructor(private http: HttpClient) { }
 
   getMenuData(): Observable<HomeContent[]> {
-    return this.http.get<HomeContent[]>(this.baseApiUrl);
+    return this.http.get<HomeContent[]>(this.apiUrl);
   }
 }
