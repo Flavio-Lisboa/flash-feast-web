@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class HomeService {
   private baseApiUrl = environment.baseApiUrl;
-  private apiUrl = `${this.baseApiUrl}menus`
+  private apiUrl = `${this.baseApiUrl}/menus`
 
   constructor(private http: HttpClient) { }
 
