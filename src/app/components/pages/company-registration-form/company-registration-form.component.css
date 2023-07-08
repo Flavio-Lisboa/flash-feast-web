@@ -29,7 +29,6 @@
     margin-bottom: 1.5em;
 }
 
-
 .form button {
     width: 60%;
     padding: 0.8em;
@@ -38,8 +37,6 @@
     margin: 0 auto;
     background-color: #FEDA15;
     transition: 0.4s;
-
-
 }
 
 .form button:hover {

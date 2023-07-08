@@ -2,10 +2,10 @@
     <form class="form" (ngSubmit)="submit()" [formGroup]="companyRegistrationForm">
         <span>Register your company!</span>
         <input type="text" placeholder="Company name" formControlName="name">
-        <input type="text" placeholder="Cnpj" formControlName="cnpj">
+        <input type="text" placeholder="Cnpj" formControlName="cnpj" mask="00.000.000/0000-00">
         <input type="text" placeholder="Email" formControlName="email">
         <input type="text" placeholder="Password" formControlName="password">
-        <input type="text" placeholder="Phone" formControlName="phone">
+        <input type="text" placeholder="Phone" formControlName="phone" mask="(00) 00000-0000">
         <input type="file" accept="image/*" (change)="onFileSelected($event)">
         <button type="submit">Enviar</button>
     </form>

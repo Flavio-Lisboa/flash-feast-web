@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CompanyRegistrationFormComponent } from './components/pages/company-registration-form/company-registration-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CompanyOutletComponent } from './components/company-outlet/company-outlet.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CompanyOutletComponent } from './components/company-outlet/company-outl
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
