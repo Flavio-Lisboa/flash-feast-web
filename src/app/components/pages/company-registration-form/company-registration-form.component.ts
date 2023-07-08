@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { CompanyService } from 'src/app/services/company.service';
 import { Company } from 'src/app/interfaces/Company';
+import { finalize } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-company-registration-form',
@@ -13,17 +15,10 @@ export class CompanyRegistrationFormComponent implements OnInit {
   companyRegistrationForm!: FormGroup;
   companyData!: Company;
 
-  constructor(private companyService: CompanyService, private formBuilder: FormBuilder) { }
+  constructor(private companyService: CompanyService, private formBuilder: FormBuilder, private route: Router) { }
 
   ngOnInit(): void {
-    this.companyRegistrationForm = this.formBuilder.group({
-      cnpj: [null],
-      name: [null],
-      email: [null],
-      password: [null],
-      phone: [null],
-      logo: [null]
-    })
+    this.companyRegistrationForm = this.formBuilder.group({ cnpj: [null], name: [null], email: [null], password: [null], phone: [null], logo: [null] })
 
     this.companyRegistrationForm.valueChanges.subscribe(formData => {
       this.companyData = formData;
@@ -37,8 +32,10 @@ export class CompanyRegistrationFormComponent implements OnInit {
     formData.append('email', this.companyData.email);
     formData.append('password', this.companyData.password);
     formData.append('phone', this.companyData.phone);
-    formData.append('logo', this.companyData.cnpj);
-    this.companyService.createCompany(formData).subscribe();
+    formData.append('logo', this.companyData.logo);
+    this.companyService.createCompany(formData).pipe(
+      finalize(() => this.route.navigate(['home']))
+    ).subscribe();
   }
 
   onFileSelected(event: any) {

@@ -8,12 +8,12 @@ import { HomeService } from 'src/app/services/home.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  homeContent: HomeContent[] = [];
+  homeContent!: HomeContent[];
 
   constructor(private homeService: HomeService) { }
 
   ngOnInit(): void {
-    this.homeService.getMenuData().subscribe((items) => {
+    this.homeService.getMenuData().subscribe((items: HomeContent[]) => {
       this.homeContent = items;
     });
   }

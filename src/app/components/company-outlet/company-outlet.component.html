@@ -1,0 +1,16 @@
+<div class="company-menu">
+    <div class="company-menu__info">
+        <img src="{{companyOutletData.companyLogo}}" alt="">
+        <span>{{companyOutletData.companyName | titlecase}}</span>
+    </div>
+    <div class="cards">
+        <div class="card" *ngFor="let card of companyOutletData.menus">
+            <img src="{{card.image}}" alt="">
+            <h2>{{card.name}}</h2>
+            <span>{{card.description}}</span>
+            <span>Qtd: {{card.availableQuantity}}</span>
+            <span>R$ {{card.price}}</span>
+            <button>Buy</button>
+        </div>
+    </div>  
+</div>

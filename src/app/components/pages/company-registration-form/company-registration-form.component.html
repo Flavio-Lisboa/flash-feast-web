@@ -1,9 +1,12 @@
-<form (ngSubmit)="submit()" [formGroup]="companyRegistrationForm">
-    <input type="text" placeholder="Company name" formControlName="name">
-    <input type="text" placeholder="Cnpj" formControlName="cnpj">
-    <input type="text" placeholder="Email" formControlName="email">
-    <input type="text" placeholder="Password" formControlName="password">
-    <input type="text" placeholder="Phone" formControlName="phone">
-    <input type="file" accept="image/*" (change)="onFileSelected($event)">
-    <button type="submit">ola</button>
-</form>
+<div class="container">
+    <form class="form" (ngSubmit)="submit()" [formGroup]="companyRegistrationForm">
+        <span>Register your company!</span>
+        <input type="text" placeholder="Company name" formControlName="name">
+        <input type="text" placeholder="Cnpj" formControlName="cnpj">
+        <input type="text" placeholder="Email" formControlName="email">
+        <input type="text" placeholder="Password" formControlName="password">
+        <input type="text" placeholder="Phone" formControlName="phone">
+        <input type="file" accept="image/*" (change)="onFileSelected($event)">
+        <button type="submit">Enviar</button>
+    </form>
+</div>
